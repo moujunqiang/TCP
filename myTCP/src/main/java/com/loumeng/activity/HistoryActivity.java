@@ -33,6 +33,7 @@ public class HistoryActivity extends Activity {
         //通过edittext保存数据  data为name ,MODE_PRIVATE保存模式，
         SharedPreferences data = getSharedPreferences("data", MODE_PRIVATE);
         String history = data.getString("history", "");
+        //保存的数据为一条条通过逗号隔开，这个通过逗号分割出字符串数组 设置数据
         String[] split = history.split(",");
         return Arrays.asList(split);
     }
