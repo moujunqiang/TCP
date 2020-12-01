@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.loumeng.Bluetooth"
+        minSdkVersion 15
+        targetSdkVersion 26
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+//    compile project(':SlidingMenu-master')
+    implementation project(':SlidingMenu-master')
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+}
